@@ -17,6 +17,7 @@ function element(message,element) {
     parent.appendChild(newElement);
     i++;
 }
+
 form.addEventListener('submit', (e) => {
     if(username.value == '' || username.value == null){
         element('Name is required',username);
@@ -27,13 +28,13 @@ form.addEventListener('submit', (e) => {
     if (phonenumber.value == '' || phonenumber.value==null) {
         element('Phone number is required',phonenumber);
     }
-    if (email.value == '' || email.length<10 ) {
+    if (email.value == '' || email.length<10 || !email.value.includes('.com') || !email.value.includes('@') ) {
         element('Invalid email',email);
     }
-    if(passwd.length <= 8 ){
+    if(passwd.value.length <= 8 ){
         element('Password must be longer than eight charcter',passwd);
     }
-    if(passwd.length >= 30 ){
+    if(passwd.value.length >= 30 ){
         element('Password must be shorter than thirty characters',passwd);
     }
     if (passwd.value != rpasswd.value) {
@@ -48,5 +49,13 @@ form.addEventListener('submit', (e) => {
     if (i>0) {
         e.preventDefault();
         console.log('submitted');
+        setTimeout(()=>{
+            i=0;
+            let elements=document.querySelectorAll('.jovan');
+            elements.forEach(element => {
+            element.innerText='';
+            });
+        },2000);
     }
 });
+
