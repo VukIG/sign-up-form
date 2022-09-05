@@ -55,7 +55,7 @@ form.addEventListener('submit', (e) => {
             elements.forEach(element => {
             element.innerText='';
             });
-        },2000);
+        },3000);
     }
 });
 
