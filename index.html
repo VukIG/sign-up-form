@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
-    <script src="app.js" defer></script>
     <title>Sign up</title>
 </head>
 <body>
@@ -37,11 +36,11 @@
             <form action="#">
                 <div class="inputandlabel">
                     <label for="fname">First name</label>
-                    <input type="text" class="name">
+                    <input type="text" class="name" id="uname">
                 </div>
                 <div class="inputandlabel">
                     <label for="lname">Last name</label>
-                    <input type="text" class="name">
+                    <input type="text" class="name" id="usrname">
                 </div>
                 <div class="inputandlabel">
                     <label for="email">Email</label>
@@ -59,13 +58,13 @@
                     <label for="rpassword">Repeat password</label>
                     <input type="password" id="rpassword">
                 </div>
+                <div class="submitorlogin">
+                    <button type="submit">Submit</button>
+                    <p>Already have an account?<a href="#" class="jovan">Log in</a></p>
+                </div>
             </form>
         </div>
-        <div class="submitorlogin">
-            <button>Submit</button>
-            <p>Already have an account?<a href="#" class="jovan">Log in</a></p>
-        </div>
     </div>
-    
+    <script src="app.js" defer></script>
 </body>
 </html>
